@@ -2,15 +2,16 @@
 //  LPSessionPersistenceBuilder.h
 //  LuxPix
 //
-//  Created by Mark Edmunds on 12/08/2014.
+//  Created by Mark Edmunds.
 //  Copyright (c) 2014 Hybrid Designs. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "LPSessionPersistence.h"
+#import <Foundation/Foundation.h>
 
 @interface LPSessionPersistenceBuilder : NSObject
 
-+ (id<LPSessionPersistence>)persistenceWithType:(LPSessionPersistenceType)persistenceType;
++ (id<LPSessionPersistence>)persistenceWithType:
+    (LPSessionPersistenceType)persistenceType;
 
 @end

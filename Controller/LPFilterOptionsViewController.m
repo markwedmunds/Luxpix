@@ -2,7 +2,7 @@
 //  LPFilterOptionsViewController.m
 //  LuxPix
 //
-//  Created by Mark Edmunds on 16/07/2014.
+//  Created by Mark Edmunds.
 //  Copyright (c) 2014 Hybrid Designs. All rights reserved.
 //
 
@@ -11,43 +11,43 @@
 @implementation LPFilterOptionsViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+  [super viewDidLoad];
 }
 
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+  [super didReceiveMemoryWarning];
 }
 
 - (IBAction)applyFilterSepia:(id)sender {
-	[_delegate applyFilter:UIImageFilterTypeSepia];
+  [_delegate applyFilter:UIImageFilterTypeSepia];
 }
 
 - (IBAction)applyFilterVignette:(id)sender {
-	[_delegate applyFilter:UIImageFilterTypeVignette];
+  [_delegate applyFilter:UIImageFilterTypeVignette];
 }
 
 - (IBAction)applyFilterTemperature:(id)sender {
-	[_delegate applyFilter:UIImageFilterTypeTemperature];
+  [_delegate applyFilter:UIImageFilterTypeTemperature];
 }
 
 - (IBAction)applyFilterColorInvert:(id)sender {
-	[_delegate applyFilter:UIImageFilterTypeColorInvert];
+  [_delegate applyFilter:UIImageFilterTypeColorInvert];
 }
 
 - (IBAction)applyFilterHue:(id)sender {
-	[_delegate applyFilter:UIImageFilterTypeHue];
+  [_delegate applyFilter:UIImageFilterTypeHue];
 }
 
 - (IBAction)applyFilterExposure:(id)sender {
-	[_delegate applyFilter:UIImageFilterTypeExposure];
+  [_delegate applyFilter:UIImageFilterTypeExposure];
 }
 
 - (IBAction)applyFilterHighlightShadow:(id)sender {
-	[_delegate applyFilter:UIImageFilterTypeHighlightShadow];
+  [_delegate applyFilter:UIImageFilterTypeHighlightShadow];
 }
 
 - (IBAction)applyFilterColorControl:(id)sender {
-	[_delegate applyFilter:UIImageFilterTypeColorControl];
+  [_delegate applyFilter:UIImageFilterTypeColorControl];
 }
 
 @end

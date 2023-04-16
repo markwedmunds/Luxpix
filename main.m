@@ -2,7 +2,7 @@
 //  main.m
 //  LuxPix
 //
-//  Created by Mark Edmunds on 24/05/2014.
+//  Created by Mark Edmunds.
 //  Copyright (c) 2014 Hybrid Designs. All rights reserved.
 //
 
@@ -10,9 +10,9 @@
 
 #import "LPAppDelegate.h"
 
-int main(int argc, char *argv[])
-{
-	@autoreleasepool {
-	    return UIApplicationMain(argc, argv, nil, NSStringFromClass([LPAppDelegate class]));
-	}
+int main(int argc, char *argv[]) {
+  @autoreleasepool {
+    return UIApplicationMain(argc, argv, nil,
+                             NSStringFromClass([LPAppDelegate class]));
+  }
 }

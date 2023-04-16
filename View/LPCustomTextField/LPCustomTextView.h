@@ -2,7 +2,7 @@
 //  LPCustomTextView.h
 //  LuxPix
 //
-//  Created by Mark Edmunds on 15/08/2014.
+//  Created by Mark Edmunds.
 //  Copyright (c) 2014 Hybrid Designs. All rights reserved.
 //
 
@@ -10,8 +10,8 @@
 
 @interface LPCustomTextView : UITextView
 
-@property (nonatomic, retain) NSString *placeholder;
-@property (nonatomic, retain) UIColor *placeholderColor;
+@property(nonatomic, retain) NSString *placeholder;
+@property(nonatomic, retain) UIColor *placeholderColor;
 
 - (void)textChanged:(NSNotification *)notification;
 

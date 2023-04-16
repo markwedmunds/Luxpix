@@ -2,7 +2,7 @@
 //  LPCameraViewController.h
 //  LuxPix
 //
-//  Created by Mark Edmunds on 16/07/2014.
+//  Created by Mark Edmunds.
 //  Copyright (c) 2014 Hybrid Designs. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 @interface LPCameraViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIView *videoPreview;
+@property(weak, nonatomic) IBOutlet UIView *videoPreview;
 
 - (IBAction)takePhoto:(id)sender;
 - (IBAction)closeCamera:(id)sender;

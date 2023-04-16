@@ -2,7 +2,7 @@
 //  LPFilterViewController.m
 //  LuxPix
 //
-//  Created by Mark Edmunds on 16/07/2014.
+//  Created by Mark Edmunds.
 //  Copyright (c) 2014 Hybrid Designs. All rights reserved.
 //
 
@@ -12,53 +12,55 @@
 #import "UIImage+Filters.h"
 
 @implementation LPFilterViewController {
-	UIImage *_image;
-	UIImage *_filteredImage;
+  UIImage *_image;
+  UIImage *_filteredImage;
 }
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+  [super viewDidLoad];
 
-	if (_image) {
-		[_imagePreview setImage:_image];
-	}
+  if (_image) {
+    [_imagePreview setImage:_image];
+  }
 }
 
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+  [super didReceiveMemoryWarning];
 }
 
 - (void)setPreviewImage:(UIImage *)image {
-	_image = image;
+  _image = image;
 }
 
 - (void)applyFilter:(UIImageFilterType)filterType {
-	NSOperationQueue *backgroundQueue = [NSOperationQueue new];
-	[backgroundQueue addOperationWithBlock:^{
-		_filteredImage = [_image imageWithFilter:filterType];
-		[[NSOperationQueue mainQueue] addOperationWithBlock:^ {
-			[_imagePreview setImage:_filteredImage];
-		}];
-	}];
+  NSOperationQueue *backgroundQueue = [NSOperationQueue new];
+  [backgroundQueue addOperationWithBlock:^{
+    _filteredImage = [_image imageWithFilter:filterType];
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+      [_imagePreview setImage:_filteredImage];
+    }];
+  }];
 }
 
 - (IBAction)nextClicked:(id)sender {
-	[self performSegueWithIdentifier:@"Share" sender:self];
+  [self performSegueWithIdentifier:@"Share" sender:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-	if ([segue.identifier isEqualToString:@"FilterOptions"]) {
-        LPFilterOptionsViewController *filterOptionsViewController = segue.destinationViewController;
-		filterOptionsViewController.delegate = self;
-    } else if ([segue.identifier isEqualToString:@"Share"]) {
-		LPShareViewController *shareViewController = segue.destinationViewController;
+  if ([segue.identifier isEqualToString:@"FilterOptions"]) {
+    LPFilterOptionsViewController *filterOptionsViewController =
+        segue.destinationViewController;
+    filterOptionsViewController.delegate = self;
+  } else if ([segue.identifier isEqualToString:@"Share"]) {
+    LPShareViewController *shareViewController =
+        segue.destinationViewController;
 
-		if (_filteredImage) {
-			[shareViewController setPreviewImage:_filteredImage];
-		} else {
-			[shareViewController setPreviewImage:_image];
-		}
-	}
+    if (_filteredImage) {
+      [shareViewController setPreviewImage:_filteredImage];
+    } else {
+      [shareViewController setPreviewImage:_image];
+    }
+  }
 }
 
 @end

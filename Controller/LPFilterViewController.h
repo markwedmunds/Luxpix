@@ -2,16 +2,16 @@
 //  LPFilterViewController.h
 //  LuxPix
 //
-//  Created by Mark Edmunds on 16/07/2014.
+//  Created by Mark Edmunds.
 //  Copyright (c) 2014 Hybrid Designs. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "LPFilterOptionsViewController.h"
+#import <UIKit/UIKit.h>
 
 @interface LPFilterViewController : UIViewController <LPFilterOptionsDelegate>
 
-@property (weak, nonatomic) IBOutlet UIImageView *imagePreview;
+@property(weak, nonatomic) IBOutlet UIImageView *imagePreview;
 
 - (void)setPreviewImage:(UIImage *)image;
 - (IBAction)nextClicked:(id)sender;

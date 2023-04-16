@@ -2,16 +2,16 @@
 //  LPTwitterSessionService.h
 //  LuxPix
 //
-//  Created by Mark Edmunds on 13/08/2014.
+//  Created by Mark Edmunds.
 //  Copyright (c) 2014 Hybrid Designs. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "LPSessionService.h"
+#import <Foundation/Foundation.h>
 
 @interface LPTwitterSessionService : NSObject <LPSessionService>
 
-@property (weak, nonatomic) id<LPSessionServiceDelegate> delegate;
+@property(weak, nonatomic) id<LPSessionServiceDelegate> delegate;
 
 - (id)initWithDelegate:(id<LPSessionServiceDelegate>)delegate;
 

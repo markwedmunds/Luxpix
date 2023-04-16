@@ -2,12 +2,12 @@
 //  LPFilterOptionsViewController.h
 //  LuxPix
 //
-//  Created by Mark Edmunds on 16/07/2014.
+//  Created by Mark Edmunds.
 //  Copyright (c) 2014 Hybrid Designs. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "UIImage+Filters.h"
+#import <UIKit/UIKit.h>
 
 @protocol LPFilterOptionsDelegate <NSObject>
 
@@ -17,7 +17,7 @@
 
 @interface LPFilterOptionsViewController : UIViewController
 
-@property (weak, nonatomic) id <LPFilterOptionsDelegate> delegate;
+@property(weak, nonatomic) id<LPFilterOptionsDelegate> delegate;
 
 - (IBAction)applyFilterSepia:(id)sender;
 - (IBAction)applyFilterVignette:(id)sender;

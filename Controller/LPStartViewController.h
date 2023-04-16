@@ -2,7 +2,7 @@
 //  LPStartViewController.h
 //  LuxPix
 //
-//  Created by Mark Edmunds on 02/08/2014.
+//  Created by Mark Edmunds.
 //  Copyright (c) 2014 Hybrid Designs. All rights reserved.
 //
 
@@ -10,6 +10,6 @@
 
 @interface LPStartViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIImageView *logo;
+@property(weak, nonatomic) IBOutlet UIImageView *logo;
 
 @end

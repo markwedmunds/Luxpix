@@ -2,7 +2,7 @@
 //  LPLoginViewController.m
 //  LuxPix
 //
-//  Created by Mark Edmunds on 24/05/2014.
+//  Created by Mark Edmunds.
 //  Copyright (c) 2014 Hybrid Designs. All rights reserved.
 //
 
@@ -10,38 +10,42 @@
 #import "MBProgressHUD.h"
 
 @implementation LPLoginViewController {
-	LPSessionController *_sessionController;
-	MBProgressHUD *_activityIndicator;
+  LPSessionController *_sessionController;
+  MBProgressHUD *_activityIndicator;
 }
 
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-	_sessionController = [LPSessionController sharedInstance];
-	[_sessionController setDelegate:self];
+  _sessionController = [LPSessionController sharedInstance];
+  [_sessionController setDelegate:self];
 
   _activityIndicator = [[MBProgressHUD alloc] initWithView:self.view];
   [self.view addSubview:_activityIndicator];
 }
 
 - (void)sessionDidLogin {
-	[self performSegueWithIdentifier:@"Home" sender:self];
+  [self performSegueWithIdentifier:@"Home" sender:self];
 }
 
 - (void)sessionDidError:(NSString *)errorMessage {
-	[[[UIAlertView alloc] initWithTitle:@"Error" message:errorMessage delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+  [[[UIAlertView alloc] initWithTitle:@"Error"
+                              message:errorMessage
+                             delegate:nil
+                    cancelButtonTitle:@"OK"
+                    otherButtonTitles:nil] show];
 }
 
 - (IBAction)facebookLoginTapped:(id)sender {
-	[_sessionController setServiceWithServiceType:LPSessionServiceTypeFacebook];
-	[_sessionController login];
+  [_sessionController setServiceWithServiceType:LPSessionServiceTypeFacebook];
+  [_sessionController login];
   [_activityIndicator show:YES];
 }
 
 - (IBAction)twitterLoginTapped:(id)sender {
-	[_sessionController setServiceWithServiceType:LPSessionServiceTypeTwitter];
-	[_sessionController login];
-	[_activityIndicator show:YES];
+  [_sessionController setServiceWithServiceType:LPSessionServiceTypeTwitter];
+  [_sessionController login];
+  [_activityIndicator show:YES];
 }
 
 @end

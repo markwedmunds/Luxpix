@@ -2,16 +2,16 @@
 //  LPSessionPersistence.h
 //  LuxPix
 //
-//  Created by Mark Edmunds on 09/08/2014.
+//  Created by Mark Edmunds.
 //  Copyright (c) 2014 Hybrid Designs. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "LPSession.h"
+#import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger, LPSessionPersistenceType) {
-	LPSessionPersistenceTypeNone,
-    LPSessionPersistenceTypeUserDefaults
+  LPSessionPersistenceTypeNone,
+  LPSessionPersistenceTypeUserDefaults
 };
 
 @protocol LPSessionPersistence <NSObject>

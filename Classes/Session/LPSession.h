@@ -2,18 +2,18 @@
 //  LPSession.h
 //  LuxPix
 //
-//  Created by Mark Edmunds on 09/08/2014.
+//  Created by Mark Edmunds.
 //  Copyright (c) 2014 Hybrid Designs. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "LPSessionService.h"
+#import <Foundation/Foundation.h>
 
 @interface LPSession : NSObject
 
-@property (assign) LPSessionServiceType serviceType;
-@property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *email;
+@property(assign) LPSessionServiceType serviceType;
+@property(strong, nonatomic) NSString *name;
+@property(strong, nonatomic) NSString *email;
 
 - (id)initWithJSON:(id)jsonObject;
 

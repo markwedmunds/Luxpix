@@ -2,12 +2,12 @@
 //  LPPropertyListPersistence.h
 //  LuxPix
 //
-//  Created by Mark Edmunds on 13/08/2014.
+//  Created by Mark Edmunds.
 //  Copyright (c) 2014 Hybrid Designs. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "LPSessionPersistence.h"
+#import <Foundation/Foundation.h>
 
 @interface LPUserDefaultsPersistence : NSObject <LPSessionPersistence>
 
