@@ -1,0 +1,33 @@
+//
+//  LPSessionService.h
+//  LuxPix
+//
+//  Created by Mark Edmunds on 09/08/2014.
+//  Copyright (c) 2014 Hybrid Designs. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+typedef NS_ENUM(NSInteger, LPSessionServiceType) {
+    LPSessionServiceTypeFacebook,
+    LPSessionServiceTypeTwitter,
+    LPSessionServiceTypeSinaWeibo,
+    LPSessionServiceTypeEmail
+};
+
+@protocol LPSessionServiceDelegate <NSObject>
+
+@optional
+
+- (void)sessionDidLogin:(id)responseObject;
+- (void)sessionDidLogout;
+- (void)sessionDidError:(NSString *)errorMessage;
+
+@end
+
+@protocol LPSessionService <NSObject>
+
+- (void)login;
+- (void)logout;
+
+@end
