@@ -3,7 +3,7 @@
 //  LuxPix
 //
 //  Created by Mark Edmunds.
-//  Copyright (c) 2014 Hybrid Designs. All rights reserved.
+//  Copyright (c) 2023 Hybrid Designs. All rights reserved.
 //
 
 #import "LPItemDetailViewController.h"
